@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class Pet {
 
     private Long id;
@@ -21,6 +20,8 @@ public class Pet {
 
     private ArrayList<Appointment> appointments = new ArrayList<>();
     private ArrayList<Pet> pets = new ArrayList<>();
+
+    public Pet() {}
 
     public void addPet(Pet pet) {
         pets.add(pet);

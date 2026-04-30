@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class Owner {
 
     private Long id;
@@ -19,6 +18,7 @@ public class Owner {
     private int phoneNumber;
     private ArrayList<Pet> pets = new ArrayList<>();
 
+    public Owner() {}
 
     public void addPet(Pet pet) {
         pets.add(pet);

@@ -35,13 +35,13 @@ public class Appointment {
 
     @Getter
     @Setter
-    @NoArgsConstructor
     public static class Bill{
 
 
         private double amount;
         private ArrayList<Artical>  articalsUsed = new ArrayList<>();
 
+        public Bill() {}
 
         public double calculateTotal() {
             double medsTotal = articalsUsed.stream()

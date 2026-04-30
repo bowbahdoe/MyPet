@@ -10,7 +10,6 @@ import java.util.Date;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class Artical {
 
     private static long counter = 1; //  ID
@@ -23,6 +22,8 @@ public class Artical {
     private Date expirationDate;
     private ArticleCategory category;
     private ArticalUnit unit;
+
+    public Artical() {}
 
     public Artical(String name, int quantity, int lowquantity, int price,
                    Date expirationDate, ArticleCategory category, ArticalUnit unit) {
