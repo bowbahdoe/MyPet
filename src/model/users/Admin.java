@@ -6,13 +6,14 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@NoArgsConstructor
 public class Admin {
     private String username;
     private String password;
 
     private String secretQuestion;
     private String secretAnswer;
+
+    public Admin() {}
 
     public Admin(String username, String password, String secretQuestion, String secretAnswer) {
         this.username = username;
