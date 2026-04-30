@@ -4,9 +4,8 @@ import enums.ArticleCategory;
 import enums.ArticalUnit;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -19,14 +18,14 @@ public class Artical {
     private int quantity;
     private int lowquantity;
     private int price;
-    private Date expirationDate;
+    private LocalDate expirationDate;
     private ArticleCategory category;
     private ArticalUnit unit;
 
     public Artical() {}
 
     public Artical(String name, int quantity, int lowquantity, int price,
-                   Date expirationDate, ArticleCategory category, ArticalUnit unit) {
+                   LocalDate expirationDate, ArticleCategory category, ArticalUnit unit) {
 
         this.id = counter++;
         this.name = name;
