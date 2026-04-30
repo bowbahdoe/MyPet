@@ -40,42 +40,31 @@ public class Appointment {
 
 
         private double amount;
-        private ArrayList<Artical>  articalsUsed;
+        private ArrayList<Artical>  articalsUsed = new ArrayList<>();
 
 
         public double calculateTotal() {
-            double medsTotal = 0;
-
-            if (articalsUsed != null) {
-                medsTotal = articalsUsed.stream()
-                        .mapToDouble(Artical::getPrice)
-                        .sum();
-            }
+            double medsTotal = articalsUsed.stream()
+                    .mapToDouble(Artical::getPrice)
+                    .sum();
 
             return medsTotal + amount;
         }
 
         public void addArtical(Artical artical) {
-            if (articalsUsed == null) {
-                articalsUsed = new ArrayList<>();
-            }
             articalsUsed.add(artical);
         }
 
         public void removeArtical(Artical artical) {
-            if (articalsUsed != null) {
-                articalsUsed.remove(artical);
-            }
+            articalsUsed.remove(artical);
         }
 
         public void clear() {
-            if (articalsUsed != null) {
-                articalsUsed.clear();
-            }
+            articalsUsed.clear();
         }
 
         public int getTotalItems() {
-            return articalsUsed != null ? articalsUsed.size() : 0;
+            return articalsUsed.size();
         }
     }
 }
